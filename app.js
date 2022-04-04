@@ -26,3 +26,12 @@ onst showCoffees = () => {
 }
 
 document.addEventListener("DOMContentLoaded", showCoffees)
+
+
+self.addEventListener("install", installEvent => {
+  installEvent.waitUntil(
+    caches.open(staticDevCoffee).then(cache => {
+      cache.addAll(assets)
+    })
+  )
+})
