@@ -10,7 +10,7 @@ const coffees = [
   { name: "Veritatis", image: "images/coffee8.jpg" },
   { name: "Accusantium", image: "images/coffee9.jpg" },
 ]
-onst showCoffees = () => {
+const showCoffees = () => {
   let output = ""
   coffees.forEach(
     ({ name, image }) =>
